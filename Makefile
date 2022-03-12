@@ -20,6 +20,7 @@ update:
 .PHONY: update-no-commit
 update-no-commit:
 	rsync -urvP $(SOURCE_DIR_ALL) $(USER)@$(WEBSITE):$(WEBSITE_DIR)
+	cp -r $(SOURCE_DIR)/thamognya/* ./docs/.
 
 .PHONY: git-update
 git-update:
