@@ -6,7 +6,11 @@ This contains the source code of my website.
 
 ### www.thamognya.com
 
+This is written in rust wasm
+
 ### blog.thamognya.com
+
+This is written in zola
 
 ### git.thamognya.com
 
@@ -18,3 +22,4 @@ This part of the website uses gitea.
 ## Github Pages
 
 It is just to check if anything went horribly wrong
+
