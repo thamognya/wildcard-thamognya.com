@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}
+    {{ page.title }} - {{ config.title }}
+{% endblock %}
+{% block page_meta %}
+{% if page.description %}
+    <meta content="{{ page.description | safe | default(value='') | truncate(length=150) }}" name="description"/>
+{% endif %}
+{% endblock page_meta %}
+{% block content %}
+    <main class="article-content">
+        <p><a href="..">..</a>/{{ page.slug }}</p>
+        {% if page.translations | length > 1 %}
+            {% set num_languages = page.translations | length - 1 %}
+            <small>Other language{{ num_languages | pluralize }}:</small>
+            <div class="chips chips-inline">
+                {% for l in page.translations %}
+                    {% if l.lang != lang %}
+                        <span class="lang" onclick="redirect('{{ l.permalink | safe }}')">{{ l.lang }}</span>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endif %}
+        <h1>{{ page.title }}</h1>
+        <p>Published: <time>{{ page.date }}</time>{% if page.updated %}, Updated: <time>{{ page.updated }}</time>{% endif %}</p>
+        {% if page.taxonomies.tags and page.taxonomies.tags | length > 0 %}
+            <div class="chips">
+                {% for tag in page.taxonomies.tags %}
+                    <span class="tag">{{ tag }}</span>
+                {% endfor %}
+            </div>
+        {% endif %}
+        <hr />
+        {{ page.content | safe }}
+    </main>
+{% endblock content %}

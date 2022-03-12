@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://blog.thamognya.com/</loc>
+    </url>
+    <url>
+        <loc>https://blog.thamognya.com/es/</loc>
+    </url>
+    <url>
+        <loc>https://blog.thamognya.com/es/hello-world/</loc>
+        <lastmod>2022-03-12</lastmod>
+    </url>
+    <url>
+        <loc>https://blog.thamognya.com/fr/</loc>
+    </url>
+    <url>
+        <loc>https://blog.thamognya.com/fr/hello-world/</loc>
+        <lastmod>2022-03-12</lastmod>
+    </url>
+    <url>
+        <loc>https://blog.thamognya.com/hello-world/</loc>
+        <lastmod>2022-03-12</lastmod>
+    </url>
+</urlset>
