@@ -14,3 +14,8 @@ update:
 	git commit -m 'website auto update'
 	git remote | xargs -L1 git push --all
 
+.PHONY: git-update
+git-update:
+	git add .
+	git commit -m 'auto update'
+	git remote | xargs -L1 git push --all
