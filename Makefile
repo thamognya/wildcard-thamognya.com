@@ -14,6 +14,10 @@ update:
 	git commit -m 'website auto update'
 	git remote | xargs -L1 git push --all
 
+.PHONY: update-no-commit
+update-no-commit:
+	rsync -urvP ./src/website/* $(USER)@$(WEBSITE):$(WEBSITE_DIR)
+
 .PHONY: git-update
 git-update:
 	git add .
