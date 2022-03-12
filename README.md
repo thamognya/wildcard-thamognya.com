@@ -10,7 +10,9 @@ This is written in rust wasm
 
 ### blog.thamognya.com
 
-This is written in zola
+This is written in markdowm with zola
+
+it uses the dose theme
 
 ### git.thamognya.com
 
