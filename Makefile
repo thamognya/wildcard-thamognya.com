@@ -45,3 +45,9 @@ thamognya-update:
 	git commit -m 'website: thamognya auto update'
 	git remote | xargs -L1 git push --all
 
+.PHONY: makefile-update
+makefile-update:
+	git add .
+	git commit -m 'makefile-update auto update'
+	git remote | xargs -L1 git push --all
+
