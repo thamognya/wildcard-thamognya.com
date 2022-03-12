@@ -2,8 +2,8 @@ USER := user
 WEBSITE := thamognya.com
 WEBSITE_DIR := /var/www/
 WEBSITE_DIR_ALL := /var/www/*
-SOURCE_DIR := ./src/.
-SOURCE_DIR_ALL := ./src/*
+SOURCE_DIR := ./src/website/.
+SOURCE_DIR_ALL := ./src/website/*
 
 .PHONY: download
 download:
@@ -12,7 +12,7 @@ download:
 .PHONY: update
 update:
 	rsync -urvP $(SOURCE_DIR_ALL) $(USER)@$(WEBSITE):$(WEBSITE_DIR)
-	cp $(SOURCE_DIR_ALL) ./docs/.
+	cp -r $(SOURCE_DIR)/thamognya/* ./docs/.
 	git add .
 	git commit -m 'website auto update'
 	git remote | xargs -L1 git push --all
