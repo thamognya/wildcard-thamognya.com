@@ -14,7 +14,7 @@ update:
 	rsync -urvP $(SOURCE_DIR_ALL) $(USER)@$(WEBSITE):$(WEBSITE_DIR)
 	cp -r $(SOURCE_DIR)/thamognya/* ./docs/.
 	git add .
-	git commit -m 'website auto update'
+	git commit -m 'website: all auto update'
 	git remote | xargs -L1 git push --all
 
 .PHONY: update-no-commit
@@ -25,7 +25,13 @@ update-no-commit:
 .PHONY: git-update
 git-update:
 	git add .
-	git commit -m 'auto update'
+	git commit -m 'auto update everything'
 	git remote | xargs -L1 git push --all
 
-
+.PHONY: blog-update
+blog-update:
+	exec ./scripts/blog-compile.sh
+	rsync -urvP $(SOURCE_DIR_ALL) $(USER)@$(WEBSITE):$(WEBSITE_DIR)
+	git add .
+	git commit -m 'website: blog auto update'
+	git remote | xargs -L1 git push --all
