@@ -12,6 +12,7 @@ download:
 .PHONY: update
 update:
 	rsync -urvP $(SOURCE_DIR_ALL) $(USER)@$(WEBSITE):$(WEBSITE_DIR)
+	cp $(SOURCE_DIR_ALL) ./docs/.
 	git add .
 	git commit -m 'website auto update'
 	git remote | xargs -L1 git push --all
