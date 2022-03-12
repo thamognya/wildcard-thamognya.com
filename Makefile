@@ -35,3 +35,12 @@ blog-update:
 	git add .
 	git commit -m 'website: blog auto update'
 	git remote | xargs -L1 git push --all
+
+.PHONY: thamognya-update
+thamognya-update:
+	exec ./scripts/thamognya-compile.sh
+	rsync -urvP $(SOURCE_DIR_ALL) $(USER)@$(WEBSITE):$(WEBSITE_DIR)
+	git add .
+	git commit -m 'website: thamognya auto update'
+	git remote | xargs -L1 git push --all
+
