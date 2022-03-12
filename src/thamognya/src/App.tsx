@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>This is my website under construction</p>
+        <p>This is my website under construction.</p>
         <a href="https://www.thamognya.com">My Website</a>
       </header>
     </div>
