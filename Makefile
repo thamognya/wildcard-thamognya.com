@@ -40,6 +40,7 @@ blog-update:
 thamognya-update:
 	exec ./scripts/thamognya-compile.sh
 	rsync -urvP $(SOURCE_DIR_ALL) $(USER)@$(WEBSITE):$(WEBSITE_DIR)
+	cp -r ./src/thamognya/build/* ./docs/
 	git add .
 	git commit -m 'website: thamognya auto update'
 	git remote | xargs -L1 git push --all
