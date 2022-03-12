@@ -2,8 +2,8 @@ USER := user
 WEBSITE := thamognya.com
 WEBSITE_DIR := /var/www/
 WEBSITE_DIR_ALL := /var/www/*
-SOURCE_DIR := ./src/website/.
-SOURCE_DIR_ALL := ./src/website/*
+SOURCE_DIR := ./src/.
+SOURCE_DIR_ALL := ./src/*
 
 .PHONY: download
 download:
