@@ -12,7 +12,7 @@ download:
 .PHONY: update
 update:
 	rsync -urvP $(SOURCE_DIR_ALL) $(USER)@$(WEBSITE):$(WEBSITE_DIR)
-	cp -r $(SOURCE_DIR)/thamognya/* ./docs/.
+	cp -r $(SOURCE_DIR)/thamognya/build/* ./docs/.
 	git add .
 	git commit -m 'website: all auto update'
 	git remote | xargs -L1 git push --all
