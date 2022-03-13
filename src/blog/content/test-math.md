@@ -1,6 +1,6 @@
 +++
 title = "Test Math"
-date = 2022-03-12
+date = 2022-03-13
 description = "Checking pandoc math on Html"
 +++
 
