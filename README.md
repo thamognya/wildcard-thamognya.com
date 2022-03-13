@@ -6,7 +6,7 @@ This contains the source code of my website.
 
 ### www.thamognya.com
 
-This is written in rust wasm
+THis part of the website is written in rust, but will slowly transitition into rust wasm.
 
 ### blog.thamognya.com
 
