@@ -8,6 +8,7 @@ This contains the source code of my website.
 
 THis part of the website is written in rust, but will slowly transitition into rust wasm.
 
+
 ### blog.thamognya.com
 
 This is written in markdowm with zola
