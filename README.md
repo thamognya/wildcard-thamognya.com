@@ -17,6 +17,7 @@ it uses the dose theme
 
 ### git.thamognya.com
 
+
 #### source
 
 This part of the website uses gitea.
@@ -25,4 +26,3 @@ This part of the website uses gitea.
 ## Github Pages
 
 It is just to check if anything went horribly wrong
-
