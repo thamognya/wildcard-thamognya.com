@@ -1,5 +1,5 @@
 #!/bin/sh
 
-cd ./src/thamognya/ && npm run build
+cd ./src/thamognya-src/ && npm run build
 
 sleep 2s
