@@ -4,6 +4,7 @@ WEBSITE_DIR := /var/www/
 WEBSITE_DIR_ALL := /var/www/*
 SOURCE_DIR := ./src/.
 SOURCE_DIR_ALL := ./src/*
+RSYNC_COMMAND := rsync -urvP --exclude 'thamognya-src/node_modules'
 
 .PHONY: download
 download:
@@ -11,7 +12,7 @@ download:
 
 .PHONY: update
 update:
-	rsync -urvP $(SOURCE_DIR_ALL) $(USER)@$(WEBSITE):$(WEBSITE_DIR)
+	$(RSYNC_COMMAND) $(SOURCE_DIR_ALL) $(USER)@$(WEBSITE):$(WEBSITE_DIR)
 	cp -r $(SOURCE_DIR)/thamognya/* ./docs/.
 	git add .
 	git commit -m 'website: all auto update'
@@ -19,7 +20,7 @@ update:
 
 .PHONY: update-no-commit
 update-no-commit:
-	rsync -urvP $(SOURCE_DIR_ALL) $(USER)@$(WEBSITE):$(WEBSITE_DIR)
+	$(RSYNC_COMMAND) $(SOURCE_DIR_ALL) $(USER)@$(WEBSITE):$(WEBSITE_DIR)
 	cp -r $(SOURCE_DIR)/thamognya/* ./docs/.
 
 .PHONY: git-update
@@ -31,7 +32,7 @@ git-update:
 .PHONY: blog-update
 blog-update:
 	exec ./scripts/blog-compile.sh
-	rsync -urvP $(SOURCE_DIR_ALL) $(USER)@$(WEBSITE):$(WEBSITE_DIR)
+	$(RSYNC_COMMAND) $(SOURCE_DIR_ALL) $(USER)@$(WEBSITE):$(WEBSITE_DIR)
 	git add .
 	git commit -m 'website: blog auto update'
 	git remote | xargs -L1 git push --all
@@ -39,7 +40,7 @@ blog-update:
 .PHONY: thamognya-update
 thamognya-update:
 	exec ./scripts/thamognya-compile.sh
-	rsync -urvP --exclude 'thamognya-src/node_modules' $(SOURCE_DIR_ALL) $(USER)@$(WEBSITE):$(WEBSITE_DIR)
+	$(RSYNC_COMMAND) $(SOURCE_DIR_ALL) $(USER)@$(WEBSITE):$(WEBSITE_DIR)
 	cp -r ./src/thamognya-src/build/* ./docs/
 	git add .
 	git commit -m 'website: thamognya auto update'
