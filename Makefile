@@ -4,7 +4,7 @@ WEBSITE_DIR := /var/www/
 WEBSITE_DIR_ALL := /var/www/*
 SOURCE_DIR := ./src/.
 SOURCE_DIR_ALL := ./src/*
-RSYNC_COMMAND := rsync -urvP --exclude 'thamognya-src/node_modules'
+RSYNC_COMMAND := rsync -urvP --exclude '*-src'
 
 .PHONY: download
 download:
