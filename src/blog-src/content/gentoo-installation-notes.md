@@ -14,3 +14,6 @@ description = "These are my Gentoo Installation Notes"
 
 4) If you would like to optimze your build, you can just recompile the whole system with the custom make.conf later on with the commands `emerge -e @world` or if you would like a script use the one provided in this [gentoo forums question](https://forums.gentoo.org/viewtopic-t-1041480-start-0.html), comment 4.
 
+### Here is the script:
+
+<script src="https://gist.github.com/ThamognyaKodi/a62bd48ff95b67449c8b90b1855e865d.js"></script>
