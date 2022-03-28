@@ -28,3 +28,11 @@ This part of the website uses gitea.
 It is just to check if anything went horribly wrong
 
 Edit: This github pages wont work for some reason
+
+# Licenses
+
+This work is dual-licensed under MIT and GPL 3.0 (or any later version). You have to comply to both of them if you want to use this work.
+
+`SPDX-License-Identifier: MIT AND GPL-3.0-or-later`
+
+You can find the licenses in the licenses folder.
