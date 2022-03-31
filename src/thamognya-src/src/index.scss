@@ -1,0 +1,28 @@
+$primary-light-text-color: #2e3440;
+$primary-light-background-color: #eceff4;
+
+$primary-dark-text-color: #eceff4;
+$primary-dark-background-color: #2e3440;
+
+$red: #bf616a;
+$orange: #d08770;
+$yellow: #ebcb8b;
+$green: #a3be8c;
+$purple: #b48ead;
+$teal: #88c0d0;
+$blue: #5e81ac;
+$turquoise: #8fbcbb;
+$gray-blue: #81a1c1;
+
+html {
+  font-size: 62.5%
+}
+
+body {
+  margin: 0;
+  font-family: 300 11px/1.5 'Open Sans', sans-serif;
+  color: $primary-dark-text-color;
+  background: $primary-dark-background-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
