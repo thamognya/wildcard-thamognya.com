@@ -1,1 +1,5 @@
 This is the source code for 2 (all) of my websites redirects.
+
+error redirects: *.thamognya.com (non used subdomains) to www.thamognya.com 
+
+nonwwwthamognya redirects: thamognya.com to www.thamognya.com (before my permanent redirect)
