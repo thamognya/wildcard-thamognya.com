@@ -4,7 +4,7 @@ WEBSITE_DIR := /var/www/
 WEBSITE_DIR_ALL := /var/www/*
 SOURCE_DIR := ./src/.
 SOURCE_DIR_ALL := ./src/*
-RSYNC_COMMAND := rsync -urvP --exclude '*-src'
+RSYNC_COMMAND := rsync -urvP --exclude *-src thamognya blog
 
 .PHONY: download
 download:
@@ -27,6 +27,7 @@ makefile-update:
 .PHONY: thamognya-update
 thamognya-update:
 	exec ./scripts/thamognya-compile.sh
+
 .PHONY: blog-update
 blog-update:
 	exec ./scripts/blog-compile.sh
