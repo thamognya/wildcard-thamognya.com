@@ -5,12 +5,12 @@ This contains the source code of my website.
 
 ### www.thamognya.com
 
-THis part of the website is written in rust, but will slowly transitition into rust wasm.
+THis part of the website is written in rust, but will slowly transitition into rust wasm. It is in the www.thamognya.com repo
 
 
 ### blog.thamognya.com
 
-This is written in markdowm with zola
+This is written in markdowm with zola. It is in the blog.thamognya.com repo
 
 it uses the dose theme
 

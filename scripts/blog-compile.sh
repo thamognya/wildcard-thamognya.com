@@ -1,5 +1,6 @@
 #!/bin/sh
 
-cd ./src/blog-src/ && $HOME/.local/bin/zola build && cp -r public/* ../blog/
+cd ./src/blog-src/ && git add . && git commit -m 'blog.thamognya.com: auto-update' && git remote | xargs -L1 git push --all 
 
 sleep 2s
+
